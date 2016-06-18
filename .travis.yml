@@ -6,10 +6,10 @@ jdk:
 android:
   components:
     - platform-tools
+    - tools
     - build-tools-23.0.3
     - android-23
 
-    # Support library
     - extra-android-support
     - extra-android-m2repository
 
@@ -19,7 +19,5 @@ notifications:
      - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
 
 script:
-  - sudo apt-get update && sudo apt-get install oracle-java8-installer
-  - java -version
   - chmod +x gradlew
   - ./gradlew build
