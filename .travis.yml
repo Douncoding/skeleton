@@ -19,5 +19,7 @@ notifications:
      - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
 
 script:
- - chmod +x gradlew
- - ./gradlew build
+  - sudo apt-get update && sudo apt-get install oracle-java8-installer
+  - java -version
+  - chmod +x gradlew
+  - ./gradlew build
