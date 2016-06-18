@@ -19,7 +19,9 @@ package com.douncoding.skeleton.internal.di.components;
 import com.douncoding.skeleton.internal.di.PerActivity;
 import com.douncoding.skeleton.internal.di.modules.ActivityModule;
 import com.douncoding.skeleton.internal.di.modules.UserModule;
+import com.douncoding.skeleton.presenter.UserListPresenter;
 import com.douncoding.skeleton.view.fragment.UserListFragment;
+import com.douncoding.skeleton.view.adapter.UsersAdapter;
 
 import dagger.Component;
 
@@ -30,6 +32,10 @@ import dagger.Component;
 @PerActivity
 @Component(dependencies = ApplicationComponent.class, modules = {ActivityModule.class, UserModule.class})
 public interface UserComponent extends ActivityComponent {
-  void inject(UserListFragment userListFragment);
+    /**
+     * {@link UserListFragment} 의 DI 대상은 {@link UserListPresenter} 와 {@link UsersAdapter}
+     * 이며, 각 각의 클래스가 생성자의 매개변수는 ApplicationComponent 에서 노출되야 한다.
+     */
+    void inject(UserListFragment userListFragment);
   //void inject(UserDetailsFragment userDetailsFragment);
 }
