@@ -5,6 +5,7 @@ components:
     - build-tools-23.0.3
     - extra-android-support
     - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-19
 notifications:
 email:
 recipients:
@@ -13,6 +14,3 @@ on_success: always
 on_failure: always
 before_install:
     - chmod +x gradlew
-
-script:
-    - ./gradlew clean assemble
