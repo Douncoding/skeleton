@@ -1,6 +1,6 @@
 language: android
 
-sudo: required
+sudo: true
 
 jdk:
   - oraclejdk8
@@ -8,10 +8,8 @@ jdk:
 android:
   components:
     - platform-tools
-    - tools
     - build-tools-23.0.3
     - android-23
-
     - extra-android-support
     - extra-android-m2repository
 
