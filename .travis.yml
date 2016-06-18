@@ -1,15 +1,17 @@
 language: android
 
-sudo: true
-
 jdk:
   - oraclejdk8
 
 android:
   components:
     - platform-tools
+    - tools
     - build-tools-23.0.3
     - android-21
+
+    - extra-android-support
+    - extra-android-m2repository
 
 notifications:
   slack:
