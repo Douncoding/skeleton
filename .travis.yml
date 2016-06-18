@@ -1,0 +1,17 @@
+language: android
+android:
+components:
+– android-23
+– build-tools-23.0.3
+– extra-android-support
+– extra-android-m2repository
+notifications:
+email:
+recipients:
+– douncoding@gmail.com
+on_success: always
+on_failure: always
+before_install:
+– chmod +x gradlew
+script:
+– ./gradlew clean assemble
