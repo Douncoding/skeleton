@@ -14,8 +14,6 @@ notifications:
     rooms:
      - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
 
-before_install:
- - chmod +x gradlew
-
 script:
-   - ./gradlew build connectedCheck
+ - chmod +x gradlew
+ - ./gradlew build
