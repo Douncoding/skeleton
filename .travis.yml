@@ -1,18 +1,9 @@
 language: android
 android:
-components:
-    - android-23
+  components:
+    - platform-tools
     - build-tools-23.0.3
-    - extra-android-support
-    - extra-android-m2repository
-    - sys-img-armeabi-v7a-android-19
-notifications:
-  slack:
-    rooms:
-      - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
-email:
-  recipients:
-    - douncoding@gmail.com
+    - android-23
 
-before_install:
- - chmod +x gradlew
+script:
+   - ./gradlew build connectedCheck
