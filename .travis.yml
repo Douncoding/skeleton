@@ -7,10 +7,11 @@ components:
     - extra-android-m2repository
     - sys-img-armeabi-v7a-android-19
 notifications:
+  slack:
+    rooms:
+      - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
 email:
-recipients:
+  recipients:
     - douncoding@gmail.com
 on_success: always
 on_failure: always
-before_install:
-    - chmod +x gradlew
