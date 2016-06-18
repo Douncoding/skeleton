@@ -1,23 +1,10 @@
 language: android
-
-sudo: true
-
-jdk:
-  - oraclejdk8
+jdk: oraclejdk8
 
 android:
   components:
-    - platform-tools
-    - build-tools-23.0.3
-    - android-23
-    - extra-android-support
-    - extra-android-m2repository
-
-notifications:
-  slack:
-    rooms:
-     - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
+    - build-tools-23.0.1
+    - android-21
 
 script:
-  - chmod +x gradlew
   - ./gradlew build
