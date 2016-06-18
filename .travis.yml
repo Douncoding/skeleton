@@ -9,6 +9,11 @@ android:
     - extra-android-support
     - extra-android-m2repository
 
+notifications:
+  slack:
+    rooms:
+     - douncoding:SzYCoXHcw4rqdoJpY8DZD0ev
+
 before_install:
  - chmod +x gradlew
 
