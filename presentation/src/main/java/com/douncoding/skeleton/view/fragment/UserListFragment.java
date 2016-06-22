@@ -75,7 +75,7 @@ public class UserListFragment extends BaseFragment implements UserListView {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    //this.getComponent(UserComponent.class).inject(this);
+    this.getComponent(UserComponent.class).inject(this);
   }
 
   @Override
